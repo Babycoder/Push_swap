@@ -17,13 +17,13 @@ void	ft_lstend(t_stack **a, int num)
 	else
 		(*a) = tmp;
 
+}
 
 void	ft_exit(void)
 {
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
 
 
 void	rep_check(t_stack *tmp, int n)
