@@ -26,6 +26,12 @@ typedef struct s_stack
 	struct s_stack	*next;
 }				t_stack;
 
+typedef struct		s_batch
+{
+	t_stack			*a;
+	t_stack			*b;
+}					t_batch;
+
 /************ INSTRUCTIONS ****************/
 
 void		sa(t_stack **a, int x);
