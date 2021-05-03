@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/03 03:11:41 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/03 03:23:55 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int		ft_listlen(t_stack *s);
 int		ft_listmin(t_stack *s);
 int		ft_listmax(t_stack *s);
 int		ft_checksort(t_stack *s);
-int		ft_minisort(t_batch *batch);
-int		ft_mediumsort(t_batch *t_batch);
+void	ft_minisort(t_batch *batch);
+void	ft_mediumsort(t_batch *t_batch);
 
 
 
