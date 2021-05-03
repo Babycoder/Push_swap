@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 10:15:58 by ayghazal          #+#    #+#              #
-#    Updated: 2021/04/18 10:16:00 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/05/02 15:21:14 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,11 @@ SRC =	srcs/checker/ft_strcmp.c \
 		srcs/checker/move.c \
 		srcs/checker/revrotation.c \
 		srcs/checker/rotation.c \
-
+		srcs/checker/tools.c \
+		srcs/push_swap/ft_minisort.c \
+		srcs/push_swap/ft_mediumsort.c \
+		srcs/push_swap/utils.c \
+		
 FLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
 

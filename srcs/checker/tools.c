@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 10:19:00 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/04/18 10:19:02 by ayghazal         ###   ########.fr       */
+/*   Created: 2021/05/03 03:11:23 by ayghazal          #+#    #+#             */
+/*   Updated: 2021/05/03 03:11:23 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-/*void	check_commands(char *cmd, t_stack **a, t_stack **b, int x)
+void	check_commands(char *cmd, t_stack **a, t_stack **b, int x)
 {
 	if (ft_strcmp(cmd, "sa") == 0)
 		sa(a, x);
@@ -77,23 +77,4 @@ void	ft_free(t_stack **s)
 		(*s) = (*s)->next;
 		free(tmp);
 	}
-}*/
-
-int 	main(int ac, char **av)
-{
-	t_stack	*a;
-	t_stack	*b;
-
-	if (ac == 1)
-		return (0);
-	a = get_numbers(ac, av);
-	b = NULL;
-	get_commands(&a, &b);
-	if (check(a, b))
-		ft_putendl_fd("[OK]", 1);
-	else
-		ft_putendl_fd("[KO]", 1);
-	ft_free(&a);
-	ft_free(&b);
-	return (0);
 }

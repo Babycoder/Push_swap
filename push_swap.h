@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/04/18 10:19:55 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/03 03:11:41 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,24 @@ void		ft_exit(void);
 int			ft_search(const char *s, int c);
 int			ft_strcmp(const char *s1, const char *s2);
 int			check(t_stack *a, t_stack *b);
-void		check_commands(char *cmd, t_stack **a, t_stack **b, int x);
+void			check_commands(char *cmd, t_stack **a, t_stack **b, int x);
 void		get_commands(t_stack **a, t_stack **b);
 int			check(t_stack *a, t_stack *b);
 void		ft_free(t_stack **s);
 int			ft_truenb(char *s);
+
+
+/*********** Push_Swap  ***********/
+
+int		ft_issorted(t_stack *s);
+int 	ft_checksort(t_stack *s);
+int		ft_listlen(t_stack *s);
+int		ft_listmin(t_stack *s);
+int		ft_listmax(t_stack *s);
+int		ft_checksort(t_stack *s);
+int		ft_minisort(t_batch *batch);
+int		ft_mediumsort(t_batch *t_batch);
+
+
 
 #endif

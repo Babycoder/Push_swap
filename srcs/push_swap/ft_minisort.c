@@ -23,32 +23,19 @@ int ft_issorted(t_stack *s)
         return (1);
 }
 
-int		ft_lstmin(t_stack *s)
-{
-	int min;
-
-	min = 0;
-	if (s)
-		min = s->nb;
-	while (s)
-	{
-		if (min > s->nb)
-			min = s->nb;
-		s = s->next;
-	}
-	return (min);
-}
-
 int ft_minisort(t_batch *batch)
 {
     int ret;
 
     ret = 0;
     if(!ft_issorted((*batch).a))
-    {
-        check_commands("sa", &(*batch).a, &(*batch).b, 1);
-        ret++;
-    }
-
-    
+        ret += check_commands("sa", &(*batch).a, &(*batch).b, 1);
+	if (((*batch).a)->nb != ft_listmin((*batch).a))
+	{
+		if (((*batch).a)->next->nb == ft_listmin((*batch).a))
+			ret += check_commands("ra", &(*batch).a, &(*batch).b, 1);
+		else
+			ret += check_commands("rra", &(*batch).a, &(*batch).b, 1);
+	}
+	return(ret);
 }
