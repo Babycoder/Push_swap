@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/03 03:23:55 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 12:32:48 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include "./libft/libft.h"
 
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 /************ STACK ****************/
 
 typedef struct s_stack
@@ -76,7 +78,13 @@ int		ft_listmax(t_stack *s);
 int		ft_checksort(t_stack *s);
 void	ft_minisort(t_batch *batch);
 void	ft_mediumsort(t_batch *t_batch);
-
+void	rot_loop(char stack, t_batch *batch, int c);
+void	revrot_loop(char stack, t_batch *batch, int c);
+void	loop_c(char stack, t_batch *batch, int c);
+void	fix_a(t_batch *batch);
+void	prep_a(t_batch *batch);
+void	fix_b(t_batch *batch);
+void	prep_b(t_batch *batch);
 
 
 #endif

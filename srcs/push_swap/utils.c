@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/02 14:55:51 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/03 00:18:51 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:15:13 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ int	ft_checksort(t_stack *s)
 	return (1);
 }
 
-
-int		ft_listmin(t_stack *s)
+int	ft_listmin(t_stack *s)
 {
-	int min;
+	int	min;
 
 	min = 0;
 	if (s)
@@ -40,7 +39,7 @@ int		ft_listmin(t_stack *s)
 	return (min);
 }
 
-int		ft_listmax(t_stack *s)
+int	ft_listmax(t_stack *s)
 {
 	int	max;
 
@@ -56,9 +55,9 @@ int		ft_listmax(t_stack *s)
 	return (max);
 }
 
-int		ft_listlen(t_stack *s)
+int	ft_listlen(t_stack *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s)

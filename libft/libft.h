@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 19:21:26 by ayghazal          #+#    #+#             */
-/*   Updated: 2019/10/27 20:56:18 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:11:08 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
-int			ft_atoi(const char *str);
+long int			ft_atoi(const char *str);
 void		ft_bzero(void *argv, size_t n);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int x);

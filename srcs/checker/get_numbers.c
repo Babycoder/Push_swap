@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_numbers.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/04/18 10:19:35 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:27:11 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int 	ft_truenb(char *s)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		if ((s[i] >= '0' && s[i] <= '9') || s[i] == '-')
 			i++;
 		else
 			return (0);
@@ -66,7 +66,7 @@ t_stack 	*get_numbers(int ac, char **av)
 {
 	t_stack	*a;
 	int		i;
-	int		n;
+	long int		n;
 
 	i = 1;
 	a = NULL;
@@ -75,6 +75,8 @@ t_stack 	*get_numbers(int ac, char **av)
 		if (!ft_truenb(av[i]))
 			ft_exit();
 		n = ft_atoi(av[i]);
+		if (n == 2147483649)
+			ft_exit();
 		rep_check(a, n);
 		ft_pushend(&a, n);
 		i++;
