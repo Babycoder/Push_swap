@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 19:21:26 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/05 13:11:08 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:56:30 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
-long int			ft_atoi(const char *str);
+long int	ft_atoi(const char *str);
 void		ft_bzero(void *argv, size_t n);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int x);

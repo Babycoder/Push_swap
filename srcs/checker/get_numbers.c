@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/05 13:27:11 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:56:17 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ int 	ft_truenb(char *s)
 
 t_stack 	*get_numbers(int ac, char **av)
 {
-	t_stack	*a;
-	int		i;
-	long int		n;
+	t_stack		*a;
+	int			i;
+	long int	n;
 
 	i = 1;
 	a = NULL;

@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/05 12:32:48 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:57:47 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }				t_stack;
 
-typedef struct		s_batch
+typedef struct s_batch
 {
 	t_stack			*a;
 	t_stack			*b;
@@ -61,30 +61,28 @@ void		ft_exit(void);
 int			ft_search(const char *s, int c);
 int			ft_strcmp(const char *s1, const char *s2);
 int			check(t_stack *a, t_stack *b);
-void			check_commands(char *cmd, t_stack **a, t_stack **b, int x);
+void		check_commands(char *cmd, t_stack **a, t_stack **b, int x);
 void		get_commands(t_stack **a, t_stack **b);
 int			check(t_stack *a, t_stack *b);
 void		ft_free(t_stack **s);
 int			ft_truenb(char *s);
 
-
 /*********** Push_Swap  ***********/
 
-int		ft_issorted(t_stack *s);
-int 	ft_checksort(t_stack *s);
-int		ft_listlen(t_stack *s);
-int		ft_listmin(t_stack *s);
-int		ft_listmax(t_stack *s);
-int		ft_checksort(t_stack *s);
-void	ft_minisort(t_batch *batch);
-void	ft_mediumsort(t_batch *t_batch);
-void	rot_loop(char stack, t_batch *batch, int c);
-void	revrot_loop(char stack, t_batch *batch, int c);
-void	loop_c(char stack, t_batch *batch, int c);
-void	fix_a(t_batch *batch);
-void	prep_a(t_batch *batch);
-void	fix_b(t_batch *batch);
-void	prep_b(t_batch *batch);
-
+int			ft_issorted(t_stack *s);
+int			ft_checksort(t_stack *s);
+int			ft_listlen(t_stack *s);
+int			ft_listmin(t_stack *s);
+int			ft_listmax(t_stack *s);
+int			ft_checksort(t_stack *s);
+void		ft_minisort(t_batch *batch);
+void		ft_mediumsort(t_batch *t_batch);
+void		rot_loop(char stack, t_batch *batch, int c);
+void		revrot_loop(char stack, t_batch *batch, int c);
+void		loop_c(char stack, t_batch *batch, int c);
+void		fix_a(t_batch *batch);
+void		prep_a(t_batch *batch);
+void		fix_b(t_batch *batch);
+void		prep_b(t_batch *batch);
 
 #endif
