@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 17:49:35 by ayghazal          #+#    #+#             */
-/*   Updated: 2019/10/29 23:49:31 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 11:49:34 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		left(char const *s1, char const *set, int *ptr)
+static int	left(char const *s1, char const *set, int *ptr)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -36,10 +36,10 @@ static int		left(char const *s1, char const *set, int *ptr)
 	return (i);
 }
 
-static int		right(char const *s1, char const *set, int *ptr)
+static int	right(char const *s1, char const *set, int *ptr)
 {
-	int j;
-	int l;
+	int	j;
+	int	l;
 
 	j = 0;
 	l = ft_strlen(s1) - 1;
@@ -60,7 +60,7 @@ static int		right(char const *s1, char const *set, int *ptr)
 	return (l);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		l;
@@ -73,5 +73,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	notfound = 0;
 	i = left(s1, set, &notfound);
 	l = right(s1, set, &notfound);
-	return (notfound) ? (ft_substr(s1, i, ((l - i) + 1))) : ft_strdup("");
+	if (notfound)
+		return (ft_substr(s1, i, ((l - i) + 1)));
+	else
+		return (ft_strdup(""));
 }

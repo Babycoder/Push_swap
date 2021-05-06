@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_chunksort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 00:59:44 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 01:08:06 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 11:33:07 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int ft_instack(t_stack *s, int chunk)
+int	ft_instack(t_stack *s, int chunk)
 {
 	while (s)
 	{
@@ -23,9 +23,9 @@ int ft_instack(t_stack *s, int chunk)
 	return (0);
 }
 
-void    ft_chunksort(t_batch *batch, int chunk)
+void	ft_chunksort(t_batch *batch, int chunk)
 {
-    while ((((*batch).a) && ft_instack((*batch).a, chunk)))
+	while ((((*batch).a) && ft_instack((*batch).a, chunk)))
 	{
 		if (((*batch).a)->nb <= chunk)
 		{

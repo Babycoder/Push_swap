@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 03:12:54 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 02:48:17 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 11:26:04 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	push_to_a(t_stack **a, t_stack **b)
 
 void	sort_stack(t_batch *batch)
 {
-	int i;
-	int div;
-	int chunk;
+	int	i;
+	int	div;
+	int	chunk;
 
 	chunk = 0;
 	div = 0;
@@ -43,7 +43,7 @@ void	sort_stack(t_batch *batch)
 	if (div)
 	{
 		chunk = (ft_listmax((*batch).a) - ft_listmin((*batch).a)) / div;
-		while(i <= div)
+		while (i <= div)
 		{
 			ft_chunksort(batch, chunk * i);
 			i++;
@@ -54,7 +54,7 @@ void	sort_stack(t_batch *batch)
 
 int	main(int ac, char **av)
 {
-	t_batch	     batch;
+	t_batch	batch;
 
 	batch.a = get_numbers(ac, av);
 	if (!batch.a)
