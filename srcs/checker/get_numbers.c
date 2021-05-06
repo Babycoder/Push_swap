@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_numbers.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/05 13:56:17 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 03:21:59 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,11 @@ int 	ft_truenb(char *s)
 	int	i;
 
 	i = 0;
+	if(s[i] == '-' && s[i+1] != '\0')
+		i++;
 	while (s[i])
 	{
-		if ((s[i] >= '0' && s[i] <= '9') || s[i] == '-')
+		if (s[i] >= '0' && s[i] <= '9')
 			i++;
 		else
 			return (0);

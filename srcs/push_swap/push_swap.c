@@ -6,11 +6,19 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 03:12:54 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 00:57:05 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 02:48:17 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
+
+void	push_to_a(t_stack **a, t_stack **b)
+{
+	while (*b)
+	{
+		check_commands("pa", a, b, 1);
+	}
+}
 
 void	sort_stack(t_batch *batch)
 {
@@ -18,6 +26,9 @@ void	sort_stack(t_batch *batch)
 	int div;
 	int chunk;
 
+	chunk = 0;
+	div = 0;
+	i = 1;
 	if (ft_listlen((*batch).a) <= 3)
 		ft_minisort(batch);
 	else if (ft_listlen((*batch).a) <= 40)
@@ -32,8 +43,12 @@ void	sort_stack(t_batch *batch)
 	if (div)
 	{
 		chunk = (ft_listmax((*batch).a) - ft_listmin((*batch).a)) / div;
-		while(++i < div)
+		while(i <= div)
+		{
 			ft_chunksort(batch, chunk * i);
+			i++;
+		}
+		push_to_a(&(*batch).a, &(*batch).b);
 	}
 }
 

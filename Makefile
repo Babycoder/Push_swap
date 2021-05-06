@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+         #
+#    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 10:15:58 by ayghazal          #+#    #+#              #
-#    Updated: 2021/05/05 11:10:35 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/05/06 02:37:48 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC =	srcs/checker/ft_strcmp.c \
 		srcs/push_swap/ft_mediumsort.c \
 		srcs/push_swap/utils.c \
 		srcs/push_swap/medium_utils.c \
+		srcs/push_swap/ft_chunksort.c \
 		
 FLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
