@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 03:11:23 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/05 11:11:35 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 12:47:47 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void	get_commands(t_stack **a, t_stack **b)
 		check_commands(str, a, b, 0);
 		free(str);
 	}
+	if (str[0] != '\0')
+		check_commands(str, a, b, 0);
 	if (str && *str)
 		free(str);
 }

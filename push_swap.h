@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 10:19:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 02:50:10 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 13:53:09 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ void		prep_b(t_batch *batch);
 void		ft_chunksort(t_batch *batch, int chunk);
 int			ft_instack(t_stack *s, int chunk);
 void		push_to_a(t_stack **a, t_stack **b);
+void		sort_stack(t_batch *batch);
+int			get_div(int len);
 
 #endif

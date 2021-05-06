@@ -6,13 +6,15 @@
 #    By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 10:15:58 by ayghazal          #+#    #+#              #
-#    Updated: 2021/05/06 11:39:35 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/05/06 12:08:38 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CHECKER = srcs/checker/checker.c
 PUSHSWAP = srcs/push_swap/push_swap.c
 
+NAME = checker push_swap
+#N2 = push_swap
 
 
 SRC =	srcs/checker/ft_strcmp.c \
@@ -31,15 +33,19 @@ SRC =	srcs/checker/ft_strcmp.c \
 FLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
 
-all:
+all: $(NAME)
+
+$(NAME):
 	@make -C ./libft
 	gcc -o checker $(CHECKER) $(SRC) ./libft/libft.a
 	gcc -o push_swap $(PUSHSWAP) $(SRC) ./libft/libft.a
 
 clean:
 	rm -rf $(OBJ)
+	@make re -C ./libft
 
 fclean: clean
 	rm -rf ./checker
 	rm -rf ./push_swap
+	@make fclean -C ./libft
 re: fclean all

@@ -6,11 +6,19 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 03:12:54 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 11:26:04 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:57:50 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
+
+int	get_div(int len)
+{
+	if (len <= 200)
+		return (5);
+	else
+		return (11);
+}
 
 void	push_to_a(t_stack **a, t_stack **b)
 {
@@ -28,26 +36,19 @@ void	sort_stack(t_batch *batch)
 
 	chunk = 0;
 	div = 0;
-	i = 1;
+	i = 0;
 	if (ft_listlen((*batch).a) <= 3)
 		ft_minisort(batch);
 	else if (ft_listlen((*batch).a) <= 40)
 		ft_mediumsort(batch);
 	else
-	{
-		if (ft_listlen((*batch).a) <= 200)
-			div = 5;
-		else
-			div = 11;
-	}
+		div = get_div(ft_listlen((*batch).a));
 	if (div)
 	{
 		chunk = (ft_listmax((*batch).a) - ft_listmin((*batch).a)) / div;
-		while (i <= div)
-		{
+		while (++i < div)
 			ft_chunksort(batch, chunk * i);
-			i++;
-		}
+		ft_chunksort(batch, ft_listmax((*batch).a) + 1);
 		push_to_a(&(*batch).a, &(*batch).b);
 	}
 }
