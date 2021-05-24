@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 03:12:54 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/05/06 15:57:50 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/05/24 09:40:36 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	sort_stack(t_batch *batch)
 
 	chunk = 0;
 	div = 0;
-	i = 0;
+	i = -5;
 	if (ft_listlen((*batch).a) <= 3)
 		ft_minisort(batch);
 	else if (ft_listlen((*batch).a) <= 40)
